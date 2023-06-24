@@ -1,4 +1,4 @@
 package com.github.yannicklamprecht.human;
 
-public interface Mammal {
+public sealed interface Mammal permits Human, com.github.yannicklamprecht.human.mammal.Dolphin {
 }
