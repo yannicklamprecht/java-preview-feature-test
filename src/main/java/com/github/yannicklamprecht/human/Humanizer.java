@@ -10,7 +10,7 @@ import static java.lang.StringTemplate.STR;
 
 public class Humanizer {
 
-    private List<Human> humans;
+    private List<Mammal> mammals;
 
     public Humanizer() {
 
@@ -18,23 +18,23 @@ public class Humanizer {
         var karen = new Human("Karen", new PersonalData(46, Gender.FEMALE));
         var lilly = new Human("Lilly", new PersonalData(25, Gender.other("gender-fluid")));
 
-        this.humans = List.of(peter, karen, lilly);
+        this.mammals = List.of(peter, karen, lilly);
     }
 
     public void print() {
-        for (Human human : this.humans) {
-            print(human);
+        for (Mammal mammal : this.mammals) {
+            if(mammal instanceof Human(var name, PersonalData(var _, var gender))){
+                print(name, gender);
+            }
+
         }
     }
 
-    private void print(Human human) {
-
-        var pData = human.personalData();
-
-        switch (pData.gender()) {
-            case Male male -> System.out.println(STR."Person named \{human.name()} is man");
-            case Female female -> System.out.println(STR."Person named \{human.name()} is a woman");
-            case Other(var gender) -> System.out.println(STR."Person named \{human.name()} is \{gender}");
+    private void print(String name, Gender gender) {
+        switch (gender) {
+            case Male _ -> System.out.println(STR."Person named \{name} is man");
+            case Female _ -> System.out.println(STR."Person named \{name} is a woman");
+            case Other(var genderName) -> System.out.println(STR."Person named \{name} is \{genderName}");
         }
     }
 
