@@ -5,6 +5,7 @@ import com.github.yannicklamprecht.human.gender.Gender;
 import com.github.yannicklamprecht.human.gender.Male;
 import com.github.yannicklamprecht.human.gender.Other;
 import com.github.yannicklamprecht.human.mammal.Dolphin;
+import com.github.yannicklamprecht.human.mammal.Human;
 import java.util.Arrays;
 import java.util.List;
 

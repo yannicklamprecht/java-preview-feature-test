@@ -1,4 +1,4 @@
-package com.github.yannicklamprecht.human.mammal;
+package com.github.yannicklamprecht.human;
 
 import java.util.Optional;
 
