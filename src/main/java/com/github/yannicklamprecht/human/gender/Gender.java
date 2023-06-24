@@ -1,4 +1,4 @@
-package com.github.yannicklamprecht.gender;
+package com.github.yannicklamprecht.human.gender;
 
 sealed public interface Gender permits Female, Male, Other {
     Gender MALE = new Male();

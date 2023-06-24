@@ -1,9 +1,9 @@
-package com.github.yannicklamprecht;
+package com.github.yannicklamprecht.human;
 
-import com.github.yannicklamprecht.gender.Female;
-import com.github.yannicklamprecht.gender.Gender;
-import com.github.yannicklamprecht.gender.Male;
-import com.github.yannicklamprecht.gender.Other;
+import com.github.yannicklamprecht.human.gender.Female;
+import com.github.yannicklamprecht.human.gender.Gender;
+import com.github.yannicklamprecht.human.gender.Male;
+import com.github.yannicklamprecht.human.gender.Other;
 import java.util.List;
 
 import static java.lang.StringTemplate.STR;
