@@ -13,7 +13,7 @@ import static java.lang.StringTemplate.STR;
 
 public class Humanizer {
 
-    private List<Mammal> mammals;
+    private final List<Mammal> mammals;
 
     public Humanizer() {
 
