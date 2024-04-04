@@ -38,6 +38,15 @@ public class Humanizer {
         }
     }
 
+   /* public Human hello(Human human) {
+        return human with {
+            name = "Copy Cat";
+            personalData with {
+                age = 20;
+            };
+        };
+    }*/
+
     private void print(String name, Gender gender) {
         var formattedGender = formatGender(gender);
         System.out.println(STR."Person named \{name} \{formattedGender}");

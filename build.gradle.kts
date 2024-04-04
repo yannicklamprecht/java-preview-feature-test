@@ -14,24 +14,30 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
+val ENABLE_PREVIEW = "--enable-preview"
+
+val JAVA_VERSION = JavaVersion.VERSION_23
+val RAW_JAVA_VERSION = 23
+
 java {
-    sourceCompatibility = JavaVersion.VERSION_22
-    targetCompatibility = JavaVersion.VERSION_22
+    sourceCompatibility = JAVA_VERSION
+    targetCompatibility = JAVA_VERSION
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(22))
+        languageVersion.set(JavaLanguageVersion.of(RAW_JAVA_VERSION))
     }
 }
 
 
 tasks {
     compileJava {
-        options.release.set(22)
-        options.compilerArgs.add("--enable-preview")
+        options.release.set(RAW_JAVA_VERSION)
+        options.compilerArgs.add(ENABLE_PREVIEW)
+        options.compilerArgs.add("-Xlint:preview")
     }
 
     test {
         useJUnitPlatform()
-        jvmArgs("--enable-preview")
+        jvmArgs(ENABLE_PREVIEW)
     }
 
     jar {
